@@ -1,0 +1,30 @@
+gsutil ls gs://pablochocobar/Pablo;
+
+beeline -u jdbc:hive2://localhost:10000/default -n nidhi_chavan2@cluster-5ddl-m -d org.apache.hive.jdbc.HiveDriver
+
+CREATE EXTERNAL TABLE amazon_data
+(Id VARCHAR(20),ProductId VARCHAR(50),
+UserId VARCHAR(50),ProfileName VARCHAR(255),
+HelpfulnessNumerator VARCHAR(255),
+HelpfulnessDenominator VARCHAR(255),
+Score VARCHAR(255),
+Summary VARCHAR(255),
+Text VARCHAR(255));
+
+LOCATION 'gs://pablochocobar/Pablo';
+
+select count(*) from amazon_data where UserId = ' ';
+
+select count(*) from amazon_data where ProductId = ' ';
+
+truncate table amazon_data;
+
+CREATE TABLE spammm 
+SELECT *
+FROM your_table
+WHERE LOWER(Summary) LIKE '%spam%' OR LOWER(Text) LIKE '%spam%';
+
+CREATE TABLE hammm 
+SELECT *
+FROM your_table
+WHERE LOWER(Summary) LIKE '%ham%' OR LOWER(Text) LIKE '%ham%';

@@ -19,12 +19,12 @@ select count(*) from amazon_data where ProductId = ' ';
 
 truncate table amazon_data;
 
-CREATE TABLE spammm 
+CREATE TABLE spammm AS
 SELECT *
-FROM amazon_table
+FROM amazon_data
 WHERE LOWER(Summary) LIKE '%spam%' OR LOWER(Text) LIKE '%spam%';
 
-CREATE TABLE hammm 
+CREATE TABLE hammm AS
 SELECT *
-FROM amazon_table
+FROM amazon_data
 WHERE LOWER(Summary) LIKE '%ham%' OR LOWER(Text) LIKE '%ham%';

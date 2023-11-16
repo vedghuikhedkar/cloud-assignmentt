@@ -21,10 +21,10 @@ truncate table amazon_data;
 
 CREATE TABLE spammm 
 SELECT *
-FROM your_table
+FROM amazon_table
 WHERE LOWER(Summary) LIKE '%spam%' OR LOWER(Text) LIKE '%spam%';
 
 CREATE TABLE hammm 
 SELECT *
-FROM your_table
+FROM amazon_table
 WHERE LOWER(Summary) LIKE '%ham%' OR LOWER(Text) LIKE '%ham%';

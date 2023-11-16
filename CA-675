@@ -4,12 +4,12 @@ beeline -u jdbc:hive2://localhost:10000/default -n vedghuikhedkar2@cluster-675-m
 
 CREATE EXTERNAL TABLE amazon_data
 (Id VARCHAR(20),ProductId VARCHAR(50),
-UserId VARCHAR(50),ProfileName VARCHAR(255),
-HelpfulnessNumerator VARCHAR(255),
-HelpfulnessDenominator VARCHAR(255),
-Score VARCHAR(255),
-Summary VARCHAR(255),
-Text VARCHAR(255));
+UserId VARCHAR(50),ProfileName VARCHAR(50),
+HelpfulnessNumerator VARCHAR(50),
+HelpfulnessDenominator VARCHAR(50),
+Score VARCHAR(50),
+Summary VARCHAR(50),
+Text VARCHAR(50));
 
 LOCATION 'gs://pablochocobar/Pablo';
 

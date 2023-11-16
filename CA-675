@@ -1,6 +1,6 @@
 gsutil ls gs://pablochocobar/Pablo;
 
-beeline -u jdbc:hive2://localhost:10000/default -n nidhi_chavan2@cluster-5ddl-m -d org.apache.hive.jdbc.HiveDriver
+beeline -u jdbc:hive2://localhost:10000/default -n vedghuikhedkar2@cluster-675-m -d org.apache.hive.jdbc.HiveDriver
 
 CREATE EXTERNAL TABLE amazon_data
 (Id VARCHAR(20),ProductId VARCHAR(50),
